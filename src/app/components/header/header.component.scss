@@ -1,0 +1,88 @@
+@import '../../../variables.scss';
+
+header {
+    scroll-margin-top: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15rem;
+  
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    .header__left {
+      max-width: 62rem;
+      margin-right: 4rem;
+  
+      p {
+        margin: 2rem 0 4rem;
+        max-width: 50rem;
+      }
+    }
+  
+    .header__right {
+      .header__image {
+        position: relative;
+        line-height: 0;
+  
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          border: 1px solid var(--tertiary-color);
+          position: absolute;
+          top: -1.5rem;
+          right: -1.5rem;
+          border-radius: 0.5rem;
+          z-index: -1;
+        }
+  
+        .michel {
+          border-radius: 0.5rem;
+          min-width: 25rem;
+          max-width: 100%;
+        }
+  
+        .background {
+          position: absolute;
+          top: -4rem;
+          right: -2.5rem;
+          z-index: -1;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 900px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+  
+      .header__left,
+      .header__right {
+        max-width: 100%;
+        margin: 0;
+      }
+  
+      .header__right {
+        margin-top: 4rem;
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      .header__left h1 {
+        font-size: 4rem;
+      }
+  
+      .header__left p {
+        font-size: 1.4rem;
+      }
+    }
+  }

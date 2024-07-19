@@ -1,0 +1,78 @@
+@import '../../../variables.scss';
+
+.about {
+    scroll-margin-top: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    .about__left {
+      max-width: 40rem;
+      margin-right: 4rem;
+  
+      p {
+        margin: 1rem 0 2rem;
+      }
+  
+      ul {
+        margin-left: -1.2rem;
+        display: flex;
+        flex-wrap: wrap;
+  
+        li {
+          margin-right: 2rem;
+  
+          a {
+            padding: 1rem;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  
+    .about__right {
+      max-width: 66rem;
+    }
+  
+    .paragraph {
+      color: var(--white);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .about {
+      flex-direction: column;
+      text-align: center;
+  
+      .about__left,
+      .about__right {
+        max-width: 100%;
+        margin: 0;
+      }
+  
+      .about__right {
+        margin-top: 4rem;
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .about {
+      .about__left h2,
+      .about__right h3 {
+        font-size: 3.2rem;
+      }
+  
+      .about__left p,
+      .about__right p {
+        font-size: 1.4rem;
+      }
+    }
+  }

@@ -1,0 +1,88 @@
+@import '../../../variables.scss';
+
+.projects {
+    margin-bottom: 16px;
+    scroll-margin-top: 15rem;
+  
+    .projects__content {
+      max-width: 56rem;
+      text-align: center;
+      margin: 0 auto 6rem;
+    }
+  
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12rem;
+  
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        &.projects__reversed-list {
+          flex-direction: row-reverse;
+        }
+  
+        .image {
+          flex: 1;
+          margin-right: 4rem;
+  
+          img {
+            width: 100%;
+            min-width: 40rem;
+            max-width: 47rem;
+            height: auto;
+          }
+        }
+  
+        .projects__info {
+          flex: 1;
+  
+          a {
+            font-weight: 500;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 900px) {
+      ul {
+        li {
+          flex-direction: column;
+  
+          .image,
+          .projects__info {
+            float: none;
+            margin: 0;
+            text-align: center;
+  
+            &.projects__reversed-list {
+              flex-direction: column;
+            }
+          }
+  
+          .projects__info {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 600px) {
+      ul {
+        li {
+          .projects__info {
+            h3 {
+              font-size: 2.4rem;
+            }
+  
+            p {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
